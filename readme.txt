@@ -18,12 +18,12 @@ Contact me for say hello <a href="http://onnayokheng.com">Onnay Okheng</a> or bu
 
 == Installation ==
 
-1. Upload the folder 'WP e-Commerce Related Products' to the '/wp-content/plugins/' directory
+1. Upload the folder 'wpec-related-products' to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
 
-<h4>1.0</h4>
+<h4>1.1</h4>
 <ul>
     <li>Edit: Change the plugin name.</li>
     <li>New: Add Plugin Options</li>
