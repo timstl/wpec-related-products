@@ -2,7 +2,7 @@
 /**
   * Plugin Name: WP e-Commerce Related Product
   * Description: WPEC Related Products for WP e-Commerce uses information available within the Single Product template to display related Products that belong to the same Product Category.
-  * Version: 1.2
+  * Version: 1.3
   * Author: Onnay Okheng
   * Author URI: http://onnayokheng.com/
 
@@ -117,7 +117,7 @@ function on_wpec_related(){
                 echo "</div><div class='clear'></div>";
                 
             endif;
-            wp_reset_query();
+            wp_reset_postdata();
         }
         
 }

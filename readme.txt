@@ -2,8 +2,8 @@
 Contributors: onnayokheng
 Tags: wp e commerce, wordpress, plugin, spec, wpsc related products, related product, plugin.
 Requires at least: 3.0
-Tested up to: 3.2.1
-Stable Tag: 1.2
+Tested up to: 3.3
+Stable Tag: 1.3
 
 WPEC Related Products for WP e-Commerce uses information available within the Single Product template to display related Products.
 
@@ -22,6 +22,11 @@ Contact me for say hello <a href="http://onnayokheng.com">Onnay Okheng</a> or bu
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+<h4>1.3</h4>
+<ul>
+    <li>Fixed: double description.</li>
+</ul>
 
 <h4>1.2</h4>
 <ul>
