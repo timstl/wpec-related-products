@@ -3,7 +3,7 @@ Contributors: onnayokheng
 Tags: wp e commerce, wordpress, plugin, spec, wpsc related products, related product, plugin.
 Requires at least: 3.0
 Tested up to: 3.3
-Stable Tag: 1.3
+Stable Tag: 1.3.1
 
 WPEC Related Products for WP e-Commerce uses information available within the Single Product template to display related Products.
 
@@ -13,15 +13,29 @@ WPEC Related Products for WP e-Commerce uses information available within the Si
 
 WPEC Related Products extend the WP e-Commerce Plugin by displaying related Products to site. It automatically selects related Products based on the Category or Tag.
 
+Thanks to Versipellis, Adam Sargant, code monkey.
 
-Contact me for say hello <a href="http://onnayokheng.com">Onnay Okheng</a> or buy me a cup of chocolate :)
+
+Contact me for say hello <a href="http://onnayokheng.com" title="WordPress Developer Indonesia">Onnay Okheng</a> or buy me a cup of chocolate :)
 
 == Installation ==
 
 1. Upload the folder 'WP e-Commerce Related Products' to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
+== Screenshots ==
+
+1. This is options panel WP e-Commerce Related Products.
+
 == Changelog ==
+
+<h4>1.3.1</h4>
+<ul>
+    <li>Fixed: condition on single.</li>
+    <li>Fixed: related by tag.</li>
+    <li>Add: Display Manually.</li>
+    <li>Add: Place 'wpsc_theme_footer'.</li>
+</ul>
 
 <h4>1.3</h4>
 <ul>
