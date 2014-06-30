@@ -1,9 +1,9 @@
 <?php
 /**
   * Plugin Name: WP e-Commerce Related Product
-  * Description: WPEC Related Products for WP e-Commerce uses information available within the Single Product template to display related Products that belong to the same Product Category.
-  * Version: 1.3.2
-  * Author: Onnay Okheng
+  * Description: FORKED for more specific categories. WPEC Related Products for WP e-Commerce uses information available within the Single Product template to display related Products that belong to the same Product Category.
+  * Version: 1.3.2-forked
+  * Author: Onnay Okheng, Forked Tim Gieseking
   * Author URI: http://onnayokheng.com/
   **/
 
@@ -13,6 +13,52 @@ function on_wpec_related_add_settings_page($page_hooks, $base_page) {
 }
 
 add_filter('wpsc_additional_pages', 'on_wpec_related_add_settings_page', 10, 2);
+
+/* 
+Added by Tim 
+Traverse down the term list to the most specific.
+There are probably better ways to do this. 
+*/
+function get_more_specific($product_cat)
+{		
+	$trimmed = array();
+	
+	/* remove the top-level categories */
+	foreach ($product_cat as $pc) 
+	{ 
+		if ($pc->parent > 0) { $trimmed[] = $pc; }
+	}
+	
+	/* everything's top-level */
+	if (empty($trimmed)) { return $product_cat; }
+	
+	$continue = true;
+	while ($continue)
+	{
+		$term_ids = array();
+		$trimmed2 = array();
+		
+		/* remaining IDs into array */
+		foreach ($trimmed as $pc) { $term_ids[] = $pc->term_id; }
+		
+		/* determine if we've removed all the parents */
+		foreach ($trimmed as $pc) 
+		{ 
+			if (in_array($pc->parent, $term_ids)) { $trimmed2[] = $pc; }
+		}
+		
+		if (!empty($trimmed2))
+		{
+			$trimmed = $trimmed2;
+		}
+		else
+		{
+			$continue = false;
+		}
+	}
+		
+	return $trimmed;
+}
 
 /**
  * Function for displaying the related products
@@ -30,6 +76,8 @@ function on_wpec_related(){
         // get related from produt category.
         $product_cat = wp_get_object_terms(wpsc_the_product_id(), 'wpsc_product_category');
         $product_tag = wp_get_object_terms(wpsc_the_product_id(), 'product_tag');
+        
+        $product_cat = get_more_specific($product_cat);
         
         // cat in array
         foreach ($product_cat as $cat_item) {
