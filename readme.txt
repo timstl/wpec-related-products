@@ -1,9 +1,11 @@
 === WP e-Commerce Related Products ===
-Contributors: onnayokheng
+Contributors: onnayokheng, timstl
 Tags: wp e commerce, wordpress, plugin, spec, wpsc related products, related product, plugin.
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable Tag: 1.3.2
+Stable Tag: 1.3.2-forked
+
+Fork of original WPEC Related Products plugin. Finds most specific categories and uses those to relate products.
 
 WPEC Related Products for WP e-Commerce uses information available within the Single Product template to display related Products.
 
