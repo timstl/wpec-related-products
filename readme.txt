@@ -5,7 +5,7 @@ Requires at least: 3.0
 Tested up to: 3.4.2
 Stable Tag: 1.3.2-forked
 
-Fork of original WPEC Related Products plugin. Finds most specific categories and uses those to relate products.
+Fork of original WPEC Related Products plugin. Finds most specific categories and uses those to relate products. Doesn't crop thumbnails.
 
 WPEC Related Products for WP e-Commerce uses information available within the Single Product template to display related Products.
 

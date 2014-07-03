@@ -2,7 +2,7 @@
 /**
   * Plugin Name: WP e-Commerce Related Product
   * Description: FORKED for more specific categories. WPEC Related Products for WP e-Commerce uses information available within the Single Product template to display related Products that belong to the same Product Category.
-  * Version: 1.3.2-forked
+  * Version: 2.0-forked
   * Author: Onnay Okheng, Forked Tim Gieseking
   * Author URI: http://onnayokheng.com/
   **/
@@ -143,9 +143,9 @@ function on_wpec_related(){
                                     <a href="<?php echo wpsc_the_product_permalink(); ?>">
 
                                         <?php if(wpsc_the_product_thumbnail()) : ?>
-                                                    <img class="product_image" id="product_image_<?php echo wpsc_the_product_id(); ?>" alt="<?php echo wpsc_the_product_title(); ?>" title="<?php echo wpsc_the_product_title(); ?>" src="<?php echo wpsc_the_product_thumbnail(100, 100); ?>"/>
+                                                    <img class="product_image" id="product_image_<?php echo wpsc_the_product_id(); ?>" alt="<?php echo wpsc_the_product_title(); ?>" title="<?php echo wpsc_the_product_title(); ?>" src="<?php echo wpsc_the_product_thumbnail(150, 0); ?>"/>
                                         <?php else: ?>
-                                                    <img class="no-image" id="product_image_<?php echo wpsc_the_product_id(); ?>" alt="No Image" title="<?php echo wpsc_the_product_title(); ?>" src="<?php echo WPSC_CORE_THEME_URL; ?>wpsc-images/noimage.png" width="100" height="100" />	
+                                                    <img class="no-image" id="product_image_<?php echo wpsc_the_product_id(); ?>" alt="No Image" title="<?php echo wpsc_the_product_title(); ?>" src="<?php echo WPSC_CORE_THEME_URL; ?>wpsc-images/noimage.png" />	
                                         <?php endif; ?>
                                     </a>
                             </div><!--close imagecol-->
